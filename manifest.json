@@ -1,0 +1,32 @@
+{
+    "manifest_version": 3,
+    "name": "Override goBaiGiang",
+    "version": "1.0",
+    "description": "Override the goBaiGiang function to open links in a new tab.",
+    "permissions": [
+        "scripting"
+    ],
+    "host_permissions": [
+        "https://svonline.hcit.edu.vn/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://svonline.hcit.edu.vn/*"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [
+                "override.js"
+            ],
+            "matches": [
+                "https://svonline.hcit.edu.vn/*"
+            ]
+        }
+    ]
+}
